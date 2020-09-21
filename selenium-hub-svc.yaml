@@ -26,7 +26,7 @@ metadata:
     app: selenium-hub
 spec:
   rules:
-  - host: "hub.31f809ff-03e3-46b2-958f-a8a43544ab89.nodes.k8s.fr-par.scw.cloud"
+  - host: "hub.9f7e5668-5cd5-482a-b441-0ebc0adc47c6.nodes.k8s.fr-par.scw.cloud"
     http:
       paths:
       - pathType: Prefix

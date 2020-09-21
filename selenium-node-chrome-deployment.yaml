@@ -6,7 +6,7 @@ metadata:
   labels:
     app: selenium-node-chrome
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: selenium-node-chrome
@@ -21,7 +21,7 @@ spec:
           medium: Memory
       containers:
       - name: selenium-node-chrome
-        image: selenium/node-chrome-debug
+        image: selenium/node-chrome-debug:3.13.0
         ports:
           - containerPort: 5555
         volumeMounts:
@@ -32,3 +32,15 @@ spec:
             value: "selenium-hub"
           - name: HUB_PORT
             value: "4444"
+          - name: NODE_MAX_INSTANCES
+            value: "5"
+          - name: NODE_MAX_SESSION
+            value: "5"
+
+        resources:
+          requests:
+            memory: "512M"
+            cpu: ".5"
+          limits:
+            memory: "1024M"
+            cpu: "1"

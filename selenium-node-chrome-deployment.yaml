@@ -21,7 +21,7 @@ spec:
           medium: Memory
       containers:
       - name: selenium-node-chrome
-        image: selenium/node-chrome-debug:3.13.0
+        image: selenium/node-chrome
         ports:
           - containerPort: 5555
         volumeMounts:
@@ -39,8 +39,8 @@ spec:
 
         resources:
           requests:
-            memory: "512M"
+            memory: "2048M"
             cpu: ".5"
           limits:
-            memory: "1024M"
+            memory: "3072M"
             cpu: "1"

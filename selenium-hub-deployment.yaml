@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: selenium-hub
-        image: selenium/hub:3.13.0
+        image: selenium/hub
         ports:
           - containerPort: 4444
         livenessProbe:
@@ -37,7 +37,5 @@ spec:
             memory: "1000Mi"
             cpu: ".5"
         env:
-          - name: GRID_TIMEOUT
-            value: "86400"
           - name: GRID_BROWSER_TIMEOUT
             value: "86400"

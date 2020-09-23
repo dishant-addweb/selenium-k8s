@@ -16,6 +16,12 @@ To deploy the templates you need to have access to a Kubernetes Cluster. For sin
 
 To deploy to minikube you need to configure ingress accordingly.
 
+- **Clone the Repo**
+
+    ```bash
+    git clone https://github.com/dishant-addweb/selenium-k8s.git
+    ```
+
 - **Start Minikube**
 
     ```bash
@@ -87,7 +93,7 @@ To deploy to minikube you need to configure ingress accordingly.
   ```bash
   kubectl get all -n selenium
   ```
-  
+
   - Open the ingress URL in browser you Generated in previous step i.e hub.192.168.99.107.nip.io to access Selenium hub.
 
 ## Kubernetes Diagram
